@@ -1,0 +1,30 @@
+{
+  "name": "360eagleweb",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "firebase": "^12.9.0",
+    "lucide-react": "^0.545.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^7.9.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-helmet": "^6.1.11",
+    "@types/react-router-dom": "^5.3.3",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "vite": "^7.3.1"
+  }
+}

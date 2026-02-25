@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://radhikasadan.com/sitemap.xml
+
+# Directories
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /includes/
+Disallow: /tmp/
+
+# Files
+Disallow: /private/
+Disallow: /config.php
+Disallow: /error_log
+
+# Allow important pages
+Allow: /about
+Allow: /contact
+Allow: /gallery
+Allow: /our-rooms
+Allow: /onboarding
+
+# CSS, JS, Images
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /assets/
