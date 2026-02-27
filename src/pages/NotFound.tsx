@@ -92,14 +92,14 @@ const NotFound: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
-                href="https://wa.me/919256687099"
+                href="https://wa.me/91 88378 81559"
                 className="flex items-center justify-center gap-2 text-white bg-[#25D366] px-8 py-3 rounded-xl font-bold hover:scale-105 transition-transform shadow-lg"
               >
                 <MessageCircle size={20} />
                 WhatsApp
               </a>
               <a
-                href="tel:+919256687099"
+                href="tel:+91 88378 81559"
                 className="flex items-center justify-center gap-2 text-gray-800 bg-white border-2 border-gray-200 px-8 py-3 rounded-xl font-bold hover:scale-105 transition-transform shadow-sm"
               >
                 <Phone size={20} />
