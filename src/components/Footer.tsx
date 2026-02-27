@@ -32,9 +32,11 @@ const Footer: React.FC = () => {
           <div className="md:col-span-5 space-y-3">
             <h3 className="font-black text-gray-900 uppercase tracking-widest text-xs">Himgiri Pickles Private Limited</h3>
             <div className="space-y-1.5 text-[11px] text-gray-600 font-medium uppercase tracking-tight">
-              <p><span className="font-black text-gray-400">WhatsApp:</span> +91-9256687099</p>
-              <p><span className="font-black text-gray-400">Location:</span> Mainpuri Road, Near Chungi, UP</p>
-              <p><span className="font-black text-gray-400">Email:</span> support@himgiripickles.com</p>
+              
+<p><span className="font-black text-gray-400">WhatsApp:</span> +91-88378 81559</p>
+              <p><span className="font-black text-gray-400">Location:</span> HOTEL RIVER VIEW IN THE FRONT OF VISION AYURVEDA CENTRE Village Danoon – PO-Sundla , Tehsil Salooni , District Chamba – 176312 ( Himachal Pradesh </p>
+              <p><span className="font-black text-gray-400">Email:</span> himgiriorganicfoods@gmail.com</p>
+
             </div>
           </div>
 
