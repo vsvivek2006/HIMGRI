@@ -119,7 +119,7 @@ const SpecialPickles: React.FC = () => {
 
   const handleWhatsApp = (pName: string) => {
     const msg = `Namaste Himgiri Pickles! I am interested in your Special Range: ${pName}. Please share ordering details.`;
-    window.open(`https://wa.me/919256687099?text=${encodeURIComponent(msg)}`, "_blank");
+    window.open(`https://wa.me/91 88378 81559?text=${encodeURIComponent(msg)}`, "_blank");
   };
 
   return (
