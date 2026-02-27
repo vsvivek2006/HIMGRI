@@ -98,7 +98,7 @@ const Pickles: React.FC = () => {
 
   const handleWhatsAppOrder = (productName: string) => {
     const message = `Namaste Himgiri Pickles! I want to order: ${productName}. Please share payment details.`;
-    window.open(`https://wa.me/919256687099?text=${encodeURIComponent(message)}`, "_blank");
+    window.open(`https://wa.me/91 88378 81559?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   return (
