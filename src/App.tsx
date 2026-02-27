@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Header from './components/Header';
@@ -19,6 +18,7 @@ import BestSelling from './pages/BestSelling';
 import SpecialPickles from './pages/SpecialPickles';
 import Checkout from './pages/Checkout'; // ✅ Added Checkout Import
 import { CartProvider } from './context/CartContext';
+import BuyerSeller from './pages/BuyerSeller';
 
 function App() {
   return (
@@ -57,6 +57,7 @@ function App() {
               <Route path="/onboarding-agreement" element={<OnboardingAgreement />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/privacy" element={<Privacy />} />
+              <Route path="/buyer-seller" element={<BuyerSeller />} />
               
               <Route path="/track-order" element={<TrackOrder />} />
               <Route path="/pickles" element={<Pickles />} />
