@@ -27,7 +27,7 @@ const Contact = () => {
 
 Namaste! I am interested in Himgiri Pickles. Please share the catalog and bulk order details.`;
 
-    const whatsappUrl = `https://wa.me/9188378 81559?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/91 88378 81559?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -35,20 +35,19 @@ Namaste! I am interested in Himgiri Pickles. Please share the catalog and bulk o
     {
       icon: <Phone className="h-6 w-6 text-[#C41E3A]" />,
       title: 'Call & WhatsApp',
-      content: '+91 88378 81559',
-      link: 'tel:+9188378 81559'
+      content: '+91 92566 87099',
+      link: 'tel:+91 88378 81559'
     },
     {
       icon: <Mail className="h-6 w-6 text-[#C41E3A]" />,
       title: 'Email Us',
-      content: 'himgiriorganicfoods@gmail.com',
-      link: 'himgiriorganicfoods@gmail.com'
+      content: 'support@himgiripickles.com',
+      link: 'mailto:support@himgiripickles.com'
     },
     {
       icon: <MapPin className="h-6 w-6 text-[#C41E3A]" />,
       title: 'Our Location',
-      content: 'HOTEL RIVER VIEW IN THE FRONT OF VISION AYURVEDA CENTRE Village Danoon – PO-Sundla , Tehsil Salooni , District Chamba – 176312 ( Himachal Pradesh 
-',
+      content: 'Mainpuri Road, Near Chungi, Uttar Pradesh, 205001 India.',
       link: '#'
     }
   ];
