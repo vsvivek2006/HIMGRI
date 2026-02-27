@@ -26,7 +26,7 @@ const Header: React.FC = () => {
       {/* 1. Tight Announcement Bar */}
       <div className="bg-[#C41E3A] text-white text-[10px] md:text-[11px] py-1.5 px-4 flex justify-between items-center tracking-wider">
         <div className="flex-1 text-center font-bold uppercase">
-          Free Shipping Above ₹999 | Call: +91 92566 87099
+          Free Shipping Above ₹999 | Call: +91 88378 81559
         </div>
         <div 
           onClick={() => setIsSubOpen(true)} 
