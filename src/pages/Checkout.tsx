@@ -70,7 +70,7 @@ const Checkout: React.FC = () => {
           `✅ _Payment Verified via Razorpay. Ready for dispatch from Mainpuri._`;
 
         // Opens WhatsApp with the order details
-        window.open(`https://wa.me/919256687099?text=${ownerWhatsAppMessage}`, '_blank');
+        window.open(`https://wa.me/91 88378 81559?text=${ownerWhatsAppMessage}`, '_blank');
         
         // Redirect to success page
         window.location.href = "/payment/success";
