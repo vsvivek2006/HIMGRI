@@ -15,7 +15,7 @@ const WhatsAppFloat = () => {
     }
     
     // Updated WhatsApp URL for Himgiri Pickles
-    const url = `https://wa.me/919256687099?text=🌶️ *Himgiri Pickles - New Order*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Product:* ${encodeURIComponent(product)}%0A*Mobile:* ${encodeURIComponent(mobile)}%0A*Location:* ${encodeURIComponent(location)}%0A%0AHello! I want to place an order for these pickles. Please confirm.`;
+    const url = `https://wa.me/91 88378 81559?text=🌶️ *Himgiri Pickles - New Order*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Product:* ${encodeURIComponent(product)}%0A*Mobile:* ${encodeURIComponent(mobile)}%0A*Location:* ${encodeURIComponent(location)}%0A%0AHello! I want to place an order for these pickles. Please confirm.`;
     
     window.open(url, '_blank');
     setOpen(false);
