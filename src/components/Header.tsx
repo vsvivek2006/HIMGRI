@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useCart } from '../context/CartContext'; 
@@ -42,11 +43,13 @@ const Header: React.FC = () => {
       <header className="bg-white border-b border-gray-100 py-2 px-4 md:px-8 relative">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-8">
           
-          {/* Logo Section */}
-          <Link to="/" className="flex items-center gap-2 group min-w-fit">
-            <div className="h-9 w-9 bg-[#C41E3A] rounded-lg flex items-center justify-center text-white font-black italic text-base shadow-sm group-hover:scale-105 transition-transform">
-                H
-            </div>
+          {/* Logo Section - Updated with Logo Image */}
+          <Link to="/" className="flex items-center gap-3 group min-w-fit">
+            <img 
+              src="/logo.png" 
+              alt="Himgiri Pickles Logo" 
+              className="h-10 w-10 object-contain group-hover:scale-105 transition-transform" 
+            />
             <div className="flex flex-col leading-none">
               <span className="text-base font-black text-gray-900 uppercase italic tracking-tighter leading-none">
                 Himgiri <span className="text-[#C41E3A]">Pickles</span>
