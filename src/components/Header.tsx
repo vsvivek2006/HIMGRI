@@ -46,7 +46,7 @@ const Header: React.FC = () => {
           {/* Logo Section - Updated with Logo Image */}
           <Link to="/" className="flex items-center gap-3 group min-w-fit">
             <img 
-              src="/logo.png" 
+              src="/logo.jpeg" 
               alt="Himgiri Pickles Logo" 
               className="h-10 w-10 object-contain group-hover:scale-105 transition-transform" 
             />
