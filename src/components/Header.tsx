@@ -47,12 +47,12 @@ const Header: React.FC = () => {
           <Link to="/" className="flex items-center gap-3 group min-w-fit">
             <img 
               src="/logo.jpeg" 
-              alt="Himgiri Pickles Logo" 
+              alt="Himgiri Organic Logo" 
               className="h-10 w-10 object-contain group-hover:scale-105 transition-transform" 
             />
             <div className="flex flex-col leading-none">
               <span className="text-base font-black text-gray-900 uppercase italic tracking-tighter leading-none">
-                Himgiri <span className="text-[#C41E3A]">Pickles</span>
+                Himgiri <span className="text-[#C41E3A]">Organic</span>
               </span>
             </div>
           </Link>
