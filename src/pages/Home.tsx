@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { db } from "../firebase"; 
@@ -158,90 +159,101 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen">
-      <Helmet><title>Himgiri Pickles | Authentic Himalayan Taste</title></Helmet>
+    <div className="bg-gray-50 min-h-screen font-sans selection:bg-[#C41E3A] selection:text-white">
+      <Helmet><title>Himgiri Organic | Authentic Himalayan Taste</title></Helmet>
 
       {/* Hero Banner */}
-      <section className="relative h-[500px] flex items-center justify-center bg-gray-900 text-white overflow-hidden">
+      <section className="relative h-[400px] md:h-[500px] flex items-center justify-center bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-40">
           <img src="https://valleycultureindia.com/cdn/shop/collections/1_1.jpg?v=1652540557&width=3816" className="w-full h-full object-cover" alt="Himalayan spices" />
         </div>
         <div className="relative z-10 text-center px-6">
           <div className="inline-block px-4 py-1.5 bg-[#C41E3A] rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6 italic">Established in Mainpuri</div>
-          <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter mb-4 leading-none italic">Pure Himalayan <br /><span className="text-[#C41E3A]">Tradition</span></h1>
-          <p className="text-xl max-w-2xl mx-auto font-medium text-gray-200 italic">Handcrafted pickles from our Mainpuri kitchen.</p>
+          <h1 className="text-4xl md:text-8xl font-black uppercase tracking-tighter mb-4 leading-none italic">Pure Himalayan <br /><span className="text-[#C41E3A]">Tradition</span></h1>
+          <p className="text-lg md:text-xl max-w-2xl mx-auto font-medium text-gray-200 italic">Handcrafted pickles from our Mainpuri kitchen.</p>
         </div>
       </section>
 
       {/* Features Bar */}
-      <div className="bg-white border-y border-gray-100 py-10">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-          <div className="flex flex-col items-center gap-3">
-            <div className="p-4 bg-green-50 rounded-2xl text-green-600"><Leaf size={32} /></div>
-            <h4 className="font-black uppercase italic tracking-tight leading-none">100% Organic</h4>
-            <p className="text-xs text-gray-500 font-medium leading-none">Pure Himalayan Ingredients</p>
+      <div className="bg-white border-y border-gray-100 py-6 md:py-10">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-3 gap-2 md:gap-12 text-center">
+          <div className="flex flex-col items-center gap-2">
+            <div className="p-2 md:p-4 bg-green-50 rounded-xl md:rounded-2xl text-green-600"><Leaf size={24} className="md:w-8 md:h-8" /></div>
+            <h4 className="font-black uppercase italic tracking-tight leading-none text-[8px] md:text-base">100% Organic</h4>
+            <p className="hidden md:block text-xs text-gray-500 font-medium leading-none">Pure Himalayan Ingredients</p>
           </div>
-          <div className="flex flex-col items-center gap-3 md:border-x border-gray-100">
-            <div className="p-4 bg-red-50 rounded-2xl text-[#C41E3A]"><Flame size={32} /></div>
-            <h4 className="font-black uppercase italic tracking-tight leading-none">Traditional</h4>
-            <p className="text-xs text-gray-500 font-medium leading-none">Hand-ground Spice Blends</p>
+          <div className="flex flex-col items-center gap-2 md:border-x border-gray-100">
+            <div className="p-2 md:p-4 bg-red-50 rounded-xl md:rounded-2xl text-[#C41E3A]"><Flame size={24} className="md:w-8 md:h-8" /></div>
+            <h4 className="font-black uppercase italic tracking-tight leading-none text-[8px] md:text-base">Traditional</h4>
+            <p className="hidden md:block text-xs text-gray-500 font-medium leading-none">Hand-ground Spice Blends</p>
           </div>
-          <div className="flex flex-col items-center gap-3">
-            <div className="p-4 bg-blue-50 rounded-2xl text-blue-600"><ShieldCheck size={32} /></div>
-            <h4 className="font-black uppercase italic tracking-tight leading-none">Pure & Safe</h4>
-            <p className="text-xs text-gray-500 font-medium leading-none">No Added Preservatives</p>
+          <div className="flex flex-col items-center gap-2">
+            <div className="p-2 md:p-4 bg-blue-50 rounded-xl md:rounded-2xl text-blue-600"><ShieldCheck size={24} className="md:w-8 md:h-8" /></div>
+            <h4 className="font-black uppercase italic tracking-tight leading-none text-[8px] md:text-base">Pure & Safe</h4>
+            <p className="hidden md:block text-xs text-gray-500 font-medium leading-none">No Added Preservatives</p>
           </div>
         </div>
       </div>
 
       {/* Main Product Grid */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-gray-100 pb-10">
+      <section className="max-w-7xl mx-auto px-4 py-12 md:py-24">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-8 md:mb-16 border-b border-gray-100 pb-6 md:pb-10">
           <div>
-            <span className="text-[#C41E3A] font-black uppercase tracking-[0.2em] text-xs leading-none">Our Full Collection</span>
-            <h2 className="text-5xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter mt-2 italic">Explore All <span className="text-[#C41E3A]">Pickles</span></h2>
+            <span className="text-[#C41E3A] font-black uppercase tracking-[0.2em] text-[10px] md:text-xs leading-none">Our Full Collection</span>
+            <h2 className="text-3xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter mt-2 italic">Explore All <span className="text-[#C41E3A]">Pickles</span></h2>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        {/* ✅ Grid Updated to 3 Columns on mobile with reduced padding and gap */}
+        <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-10">
           {combinedList.map((product) => (
-            <div key={product.id} className="group bg-white rounded-[40px] overflow-hidden border border-gray-50 hover:shadow-2xl transition-all duration-500 flex flex-col relative">
+            <div key={product.id} className="group bg-white rounded-[20px] md:rounded-[40px] overflow-hidden border border-gray-50 hover:shadow-2xl transition-all duration-500 flex flex-col relative">
               
               {isAdminMode && !product.id.toString().startsWith('orig-') && (
                 <button 
                   onClick={() => handleDeleteProduct(product.id)}
-                  className="absolute top-4 right-4 z-[100] bg-white p-3 rounded-full text-red-600 shadow-xl hover:bg-red-600 hover:text-white transition-all scale-100 hover:scale-110 active:scale-95"
+                  className="absolute top-2 right-2 md:top-4 md:right-4 z-[100] bg-white p-2 md:p-3 rounded-full text-red-600 shadow-xl hover:bg-red-600 hover:text-white transition-all scale-100 hover:scale-110 active:scale-95"
                 >
-                  <Trash2 size={20} />
+                  <Trash2 size={14} className="md:w-5 md:h-5" />
                 </button>
               )}
 
-              {/* ✅ HERO SECTION: Image Slider added here */}
               <div className="relative aspect-square overflow-hidden bg-[#FFF5F6]">
                 <ImageSlider images={product.images || [product.image]} name={product.name} />
-                {product.tag && <div className="absolute top-6 left-6 bg-black text-white px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg leading-none z-20 italic">{product.tag}</div>}
+                {product.tag && (
+                  <div className="absolute top-2 left-2 md:top-6 md:left-6 bg-black text-white px-2 py-0.5 md:px-4 md:py-1.5 rounded-full text-[6px] md:text-[10px] font-black uppercase tracking-widest shadow-lg leading-none z-20 italic">
+                    {product.tag}
+                  </div>
+                )}
               </div>
               
-              <div className="p-8 flex flex-col flex-grow">
-                <div className="flex justify-between items-start mb-4 leading-none">
-                  <span className="text-gray-400 text-[10px] font-black uppercase tracking-widest leading-none italic">{product.category}</span>
-                  <div className="flex items-center gap-1.5 text-yellow-500 leading-none">
-                    <Star size={16} fill="currentColor" stroke="none" />
-                    <span className="text-sm font-black text-gray-900 leading-none">{product.rating}</span>
+              <div className="p-2 md:p-8 flex flex-col flex-grow">
+                <div className="flex justify-between items-start mb-1 md:mb-4 leading-none">
+                  <span className="text-gray-400 text-[6px] md:text-[10px] font-black uppercase tracking-widest leading-none italic">{product.category}</span>
+                  <div className="flex items-center gap-0.5 md:gap-1.5 text-yellow-500 leading-none">
+                    <Star size={10} className="md:w-4 md:h-4" fill="currentColor" stroke="none" />
+                    <span className="text-[8px] md:text-sm font-black text-gray-900 leading-none">{product.rating}</span>
                   </div>
                 </div>
-                <h3 className="text-xl font-black text-gray-900 leading-tight mb-8 uppercase italic group-hover:text-[#C41E3A] transition-colors">{product.name}</h3>
-                <div className="mt-auto flex items-center justify-between">
-                  <span className="text-3xl font-black text-gray-900 leading-none italic">₹{product.price}</span>
-                  <button onClick={() => addToCart(product)} className="text-[10px] font-black border-2 border-gray-900 px-5 py-2.5 rounded-xl uppercase tracking-widest hover:bg-gray-900 hover:text-white transition-all active:scale-95 italic">Quick Add</button>
+                <h3 className="text-[10px] md:text-xl font-black text-gray-900 leading-tight mb-2 md:mb-8 uppercase italic group-hover:text-[#C41E3A] transition-colors line-clamp-2 md:line-clamp-none">
+                  {product.name}
+                </h3>
+                <div className="mt-auto flex items-center justify-between gap-1">
+                  <span className="text-xs md:text-3xl font-black text-gray-900 leading-none italic">₹{product.price}</span>
+                  <button 
+                    onClick={() => addToCart(product)} 
+                    className="text-[7px] md:text-[10px] font-black border border-gray-900 px-2 py-1 md:border-2 md:px-5 md:py-2.5 rounded-lg md:rounded-xl uppercase tracking-widest hover:bg-gray-900 hover:text-white transition-all active:scale-95 italic"
+                  >
+                    Add
+                  </button>
                 </div>
               </div>
             </div>
           ))}
 
-          <div className="bg-gray-50 rounded-[40px] border-2 border-dashed border-gray-200 flex flex-col items-center justify-center p-12 text-center group hover:border-[#C41E3A] transition-all duration-500 min-h-[420px]">
-            <Zap size={32} className="text-gray-300 mb-6 group-hover:text-[#C41E3A]" />
-            <h3 className="text-xl font-black text-gray-900 uppercase italic tracking-tighter leading-none italic">Expanding <br />the Kitchen</h3>
+          <div className="bg-gray-50 rounded-[20px] md:rounded-[40px] border-2 border-dashed border-gray-200 flex flex-col items-center justify-center p-4 md:p-12 text-center group hover:border-[#C41E3A] transition-all duration-500 min-h-[150px] md:min-h-[420px]">
+            <Zap size={20} className="md:w-8 md:h-8 text-gray-300 mb-2 md:mb-6 group-hover:text-[#C41E3A]" />
+            <h3 className="text-[10px] md:text-xl font-black text-gray-900 uppercase italic tracking-tighter leading-none italic">Expanding <br />the Kitchen</h3>
           </div>
         </div>
       </section>
@@ -249,11 +261,11 @@ const Home = () => {
       {/* Secret Form Modal */}
       {showSecretForm && (
         <div className="fixed inset-0 z-[2000] bg-black/90 backdrop-blur-xl flex items-center justify-center p-6 animate-in fade-in duration-300">
-          <div className="bg-white rounded-[40px] p-12 max-w-lg w-full shadow-2xl relative">
-            <button onClick={() => setShowSecretForm(false)} className="absolute top-8 right-8 text-gray-400 hover:text-black leading-none"><X size={32} /></button>
+          <div className="bg-white rounded-[40px] p-6 md:p-12 max-w-lg w-full shadow-2xl relative">
+            <button onClick={() => setShowSecretForm(false)} className="absolute top-4 right-4 md:top-8 md:right-8 text-gray-400 hover:text-black leading-none"><X size={32} /></button>
             <div className="flex items-center gap-4 mb-8 leading-none">
               <PlusCircle className="text-[#C41E3A]" size={32} />
-              <h2 className="text-3xl font-black uppercase italic tracking-tighter leading-none italic">Owner <span className="text-[#C41E3A]">Access</span></h2>
+              <h2 className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter leading-none italic">Owner <span className="text-[#C41E3A]">Access</span></h2>
             </div>
             <form onSubmit={handleAddProduct} className="space-y-4">
               <input name="p_name" type="text" placeholder="Flavor Name" required className="w-full p-4 bg-gray-50 rounded-2xl border-none outline-none font-bold text-gray-900" />
@@ -274,7 +286,6 @@ const Home = () => {
                 <option value="SIGNATURE">SIGNATURE</option>
               </select>
               
-              {/* ✅ Triple Image Inputs for the Hero Slider */}
               <div className="space-y-2">
                 <p className="text-[10px] font-black uppercase text-gray-400 tracking-widest ml-2">Product Hero Images (Max 3)</p>
                 <input name="p_image1" type="text" placeholder="Main Image URL" required className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none font-bold text-gray-900 text-xs" />
@@ -282,7 +293,7 @@ const Home = () => {
                 <input name="p_image3" type="text" placeholder="Third Image URL (Optional)" className="w-full p-3 bg-gray-50 rounded-xl border-none outline-none font-bold text-gray-900 text-xs" />
               </div>
 
-              <button type="submit" className="w-full bg-[#C41E3A] text-white py-6 rounded-2xl font-black uppercase tracking-widest shadow-xl leading-none italic italic">Add Permanently</button>
+              <button type="submit" className="w-full bg-[#C41E3A] text-white py-4 md:py-6 rounded-2xl font-black uppercase tracking-widest shadow-xl leading-none italic italic">Add Permanently</button>
             </form>
           </div>
         </div>
