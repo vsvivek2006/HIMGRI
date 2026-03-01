@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { db } from "../firebase"; 
@@ -98,93 +99,87 @@ const Pickles: React.FC = () => {
 
   const handleWhatsAppOrder = (productName: string) => {
     const message = `Namaste Himgiri Pickles! I want to order: ${productName}. Please share payment details.`;
-    window.open(`https://wa.me/91 88378 81559?text=${encodeURIComponent(message)}`, "_blank");
+    window.open(`https://wa.me/918837881559?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans pb-20">
       <Helmet><title>Our Pickles | Himgiri Pickles</title></Helmet>
 
-      <section className="bg-white border-b py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-red-50 text-[#C41E3A] px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest mb-6 leading-none italic">
+      <section className="bg-white border-b py-10 md:py-20 px-4 text-center">
+        <div className="max-w-7xl mx-auto">
+          <div className="inline-flex items-center gap-2 bg-red-50 text-[#C41E3A] px-4 py-2 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest mb-6 leading-none italic">
              <ShoppingBag size={14} /> Traditional Himalayan Flavors
           </div>
-          <h1 className="text-5xl md:text-8xl font-black uppercase italic tracking-tighter text-gray-900 leading-none mb-6">Complete <span className="text-[#C41E3A]">Flavor</span> List</h1>
-          <p className="text-gray-500 max-w-2xl mx-auto text-lg font-medium italic">Handmade with pure ingredients in our Mainpuri kitchen, Uttar Pradesh.</p>
+          <h1 className="text-4xl md:text-8xl font-black uppercase italic tracking-tighter text-gray-900 leading-none mb-6">Complete <span className="text-[#C41E3A]">Flavor</span> List</h1>
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-lg font-medium italic">Handmade with pure ingredients in our Mainpuri kitchen, Uttar Pradesh.</p>
         </div>
       </section>
 
-      <div className="sticky top-[60px] z-30 bg-white/80 backdrop-blur-md border-b py-6 px-4 mb-12">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6">
+      <div className="sticky top-[60px] z-30 bg-white/80 backdrop-blur-md border-b py-4 px-2 md:py-6 md:px-4 mb-8">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-4 md:gap-6">
           <div className="relative w-full md:w-96">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
-            <input type="text" placeholder="Search your favorite flavor..." className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:border-[#C41E3A] outline-none font-bold" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+            <input type="text" placeholder="Search your flavor..." className="w-full pl-11 pr-4 py-3 bg-gray-50 border border-gray-100 rounded-xl focus:border-[#C41E3A] outline-none font-bold text-sm" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
           </div>
-          <div className="flex items-center gap-3 overflow-x-auto no-scrollbar w-full">
-            {/* Added defensive check for Filter icon if necessary */}
-            <Filter size={20} className="hidden" />
+          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar w-full pb-2 md:pb-0">
             {["All", "Pickle", "Special", "Best Selling"].map((cat) => (
-              <button key={cat} onClick={() => setFilter(cat)} className={`px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition-all ${filter === cat ? "bg-[#C41E3A] text-white shadow-xl" : "bg-white text-gray-500 border border-gray-100"}`}>{cat}</button>
+              <button key={cat} onClick={() => setFilter(cat)} className={`whitespace-nowrap px-4 py-2 md:px-8 md:py-3 rounded-xl md:rounded-2xl font-black text-[9px] md:text-xs uppercase tracking-widest transition-all ${filter === cat ? "bg-[#C41E3A] text-white shadow-lg" : "bg-white text-gray-500 border border-gray-100"}`}>{cat}</button>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-2 md:px-4">
+        {/* ✅ Updated to 3 Columns on mobile with reduced gap */}
+        <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-8">
           {filteredProducts.map((product) => (
-            <div key={product.id} className="bg-white rounded-[40px] overflow-hidden border border-gray-100 group transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 relative">
+            <div key={product.id} className="bg-white rounded-[20px] md:rounded-[40px] overflow-hidden border border-gray-100 group transition-all duration-500 hover:shadow-2xl relative flex flex-col">
               
               {isAdminMode && !product.id.toString().startsWith('orig-') && (
-                <button 
-                  onClick={() => handleDeleteProduct(product.id)} 
-                  className="absolute top-4 right-4 z-40 bg-white p-2.5 rounded-full text-red-600 shadow-xl hover:bg-red-600 hover:text-white transition-all scale-100 hover:scale-110 active:scale-95"
-                  title="Remove Permanently"
-                >
-                  <Trash2 size={20} />
-                </button>
+                <button onClick={() => handleDeleteProduct(product.id)} className="absolute top-2 right-2 z-40 bg-white p-1.5 rounded-full text-red-600 shadow-lg"><Trash2 size={14} /></button>
               )}
 
-              <div className="aspect-square bg-[#FFF5F6] relative overflow-hidden flex items-center justify-center">
-                {product.tag && <div className="absolute top-1/2 left-0 -translate-y-1/2 -rotate-90 origin-left ml-4 bg-gray-900 text-white px-4 py-1.5 rounded-b-xl text-[9px] font-black uppercase tracking-widest z-10">{product.tag}</div>}
-                <img src={product.image} alt={product.name} className="w-56 h-56 object-cover rounded-3xl group-hover:scale-110 transition-transform duration-700 shadow-2xl" />
+              <div className="aspect-square bg-[#FFF5F6] relative overflow-hidden flex items-center justify-center p-2 md:p-0">
+                {product.tag && <div className="absolute top-2 left-0 bg-gray-900 text-white px-2 py-0.5 rounded-r-lg text-[6px] md:text-[9px] font-black uppercase tracking-widest z-10 italic">{product.tag}</div>}
+                <img src={product.image} alt={product.name} className="w-full h-full md:w-56 md:h-56 object-cover rounded-xl md:rounded-3xl group-hover:scale-110 transition-transform duration-700 shadow-lg" />
               </div>
-              <div className="p-8">
-                <div className="flex justify-between items-start mb-4 leading-none">
-                  <div>
-                    <span className="text-[10px] font-black text-[#C41E3A] uppercase tracking-[0.2em] leading-none">{product.category}</span>
-                    <h3 className="text-xl font-black text-gray-900 uppercase italic leading-none mt-1">{product.name}</h3>
+
+              <div className="p-2 md:p-8 flex flex-col flex-grow">
+                <div className="flex justify-between items-start mb-1 md:mb-4 leading-none">
+                  <div className="min-w-0">
+                    <span className="text-[6px] md:text-[10px] font-black text-[#C41E3A] uppercase tracking-wider leading-none">{product.category}</span>
+                    <h3 className="text-[9px] md:text-xl font-black text-gray-900 uppercase italic leading-tight mt-0.5 truncate">{product.name}</h3>
                   </div>
-                  <div className="flex items-center text-yellow-500 text-sm font-black leading-none">
-                    <Star size={16} fill="currentColor" stroke="none" /><span className="ml-1 leading-none">{product.rating}</span>
+                  <div className="flex items-center text-yellow-500 text-[8px] md:text-sm font-black leading-none ml-1">
+                    <Star size={10} className="md:w-4 md:h-4" fill="currentColor" stroke="none" /><span className="ml-0.5">{product.rating}</span>
                   </div>
                 </div>
-                <div className="flex flex-col mb-8 leading-none">
-                  <span className="text-3xl font-black text-gray-900 leading-none italic">₹{product.price}</span>
+                <div className="flex flex-col mb-2 md:mb-8 leading-none">
+                  <span className="text-xs md:text-3xl font-black text-gray-900 italic">₹{product.price}</span>
                 </div>
-                <div className="grid grid-cols-5 gap-3">
-                  <button onClick={() => handleWhatsAppOrder(product.name)} className="col-span-1 bg-[#25D366] text-white p-4 rounded-2xl shadow-lg flex items-center justify-center"><MessageCircle size={22} /></button>
-                  <button onClick={() => addToCart(product)} className="col-span-4 bg-gray-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest transition-all flex items-center justify-center gap-3 shadow-xl"><ShoppingCart size={20} /> Add</button>
+                <div className="grid grid-cols-4 gap-1 md:grid-cols-5 md:gap-3 mt-auto">
+                  <button onClick={() => handleWhatsAppOrder(product.name)} className="col-span-1 bg-[#25D366] text-white p-2 md:p-4 rounded-lg md:rounded-2xl shadow-md flex items-center justify-center"><MessageCircle size={14} className="md:w-5 md:h-5" /></button>
+                  <button onClick={() => addToCart(product)} className="col-span-3 md:col-span-4 bg-gray-900 text-white py-2 md:py-4 rounded-lg md:rounded-2xl font-black uppercase text-[8px] md:text-xs tracking-widest transition-all shadow-lg flex items-center justify-center gap-1 md:gap-3">Add</button>
                 </div>
               </div>
             </div>
           ))}
 
-          <div className="bg-gray-50 rounded-[40px] border-4 border-dashed border-gray-200 flex flex-col items-center justify-center p-12 text-center group hover:border-[#C41E3A] transition-all duration-500 min-h-[400px]">
-            <Zap size={32} className="text-gray-300 mb-6 group-hover:text-[#C41E3A]" />
-            <h3 className="text-2xl font-black text-gray-900 uppercase italic leading-none">Coming <br />Soon</h3>
+          <div className="bg-gray-50 rounded-[20px] md:rounded-[40px] border-2 border-dashed border-gray-200 flex flex-col items-center justify-center p-4 md:p-12 text-center group hover:border-[#C41E3A] transition-all duration-500 min-h-[150px] md:min-h-[400px]">
+            <Zap size={20} className="md:w-8 md:h-8 text-gray-300 mb-2 md:mb-6 group-hover:text-[#C41E3A]" />
+            <h3 className="text-[10px] md:text-2xl font-black text-gray-900 uppercase italic leading-none">More <br />Soon</h3>
           </div>
         </div>
       </div>
 
       {showSecretForm && (
-        <div className="fixed inset-0 z-[2000] bg-black/90 backdrop-blur-xl flex items-center justify-center p-6 animate-in fade-in duration-300">
-          <div className="bg-white rounded-[40px] p-12 max-w-lg w-full shadow-2xl relative">
-            <button onClick={() => setShowSecretForm(false)} className="absolute top-8 right-8 text-gray-400 hover:text-black leading-none"><X size={32} /></button>
+        <div className="fixed inset-0 z-[2000] bg-black/90 backdrop-blur-xl flex items-center justify-center p-6">
+          <div className="bg-white rounded-[40px] p-8 md:p-12 max-w-lg w-full shadow-2xl relative">
+            <button onClick={() => setShowSecretForm(false)} className="absolute top-6 right-6 text-gray-400 hover:text-black leading-none"><X size={32} /></button>
             <div className="flex items-center gap-4 mb-8">
               <PlusCircle className="text-[#C41E3A]" size={32} />
-              <h2 className="text-3xl font-black uppercase italic tracking-tighter leading-none italic">Owner <span className="text-[#C41E3A]">Access</span></h2>
+              <h2 className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter leading-none italic">Owner <span className="text-[#C41E3A]">Access</span></h2>
             </div>
             <form onSubmit={handleAddProduct} className="space-y-4">
               <input name="p_name" type="text" placeholder="Product Name" required className="w-full p-4 bg-gray-50 rounded-2xl border-none outline-none font-bold text-gray-900" />
@@ -192,12 +187,12 @@ const Pickles: React.FC = () => {
                 <input name="p_price" type="number" placeholder="Price (₹)" required className="w-full p-4 bg-gray-50 rounded-2xl border-none outline-none font-bold text-gray-900" />
                 <input name="p_rating" type="number" step="0.1" placeholder="Rating (e.g. 4.8)" required className="w-full p-4 bg-gray-50 rounded-2xl border-none outline-none font-bold text-gray-900" />
               </div>
-              <select name="p_category" className="w-full p-4 bg-gray-50 rounded-2xl border-none outline-none font-bold text-gray-500">
+              <select name="p_category" className="w-full p-4 bg-gray-50 rounded-2xl border-none outline-none font-bold text-gray-500 appearance-none">
                 <option value="Pickle">Pickle</option>
                 <option value="Special">Special</option>
                 <option value="Best Selling">Best Selling</option>
               </select>
-              <select name="p_tag" className="w-full p-4 bg-gray-50 rounded-2xl border-none outline-none font-bold text-gray-500">
+              <select name="p_tag" className="w-full p-4 bg-gray-50 rounded-2xl border-none outline-none font-bold text-gray-500 appearance-none">
                 <option value="">No Tag</option>
                 <option value="BEST SELLER">BEST SELLER</option>
                 <option value="NEW">NEW</option>
@@ -206,7 +201,7 @@ const Pickles: React.FC = () => {
                 <option value="HEALTHY">HEALTHY</option>
               </select>
               <input name="p_image" type="text" placeholder="Image URL" required className="w-full p-4 bg-gray-50 rounded-2xl border-none outline-none font-bold text-gray-900" />
-              <button type="submit" className="w-full bg-[#C41E3A] text-white py-6 rounded-2xl font-black uppercase tracking-widest transition-all shadow-xl leading-none italic">Add Permanently</button>
+              <button type="submit" className="w-full bg-[#C41E3A] text-white py-6 rounded-2xl font-black uppercase tracking-widest shadow-xl leading-none italic">Add Permanently</button>
             </form>
           </div>
         </div>
