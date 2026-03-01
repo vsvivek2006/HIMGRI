@@ -1,5 +1,7 @@
+
 import React, { useState } from 'react';
-import { MessageCircle, X, ShoppingBag } from 'lucide-react';
+import { MessageCircle, X, ShoppingBag, Store } from 'lucide-react';
+import { Link } from 'react-router-dom'; // ✅ Added for redirection
 
 const WhatsAppFloat = () => {
   const [open, setOpen] = useState(false);
@@ -14,8 +16,7 @@ const WhatsAppFloat = () => {
       return;
     }
     
-    // Updated WhatsApp URL for Himgiri Pickles
-    const url = `https://wa.me/91 88378 81559?text=🌶️ *Himgiri Pickles - New Order*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Product:* ${encodeURIComponent(product)}%0A*Mobile:* ${encodeURIComponent(mobile)}%0A*Location:* ${encodeURIComponent(location)}%0A%0AHello! I want to place an order for these pickles. Please confirm.`;
+    const url = `https://wa.me/918837881559?text=🌶️ *Himgiri Organic- New Order*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Product:* ${encodeURIComponent(product)}%0A*Mobile:* ${encodeURIComponent(mobile)}%0A*Location:* ${encodeURIComponent(location)}%0A%0AHello! I want to place an order for these pickles. Please confirm.`;
     
     window.open(url, '_blank');
     setOpen(false);
@@ -27,17 +28,33 @@ const WhatsAppFloat = () => {
 
   return (
     <>
-      {/* Floating Order Button - Right Side */}
-      <button
-        onClick={() => setOpen(true)}
-        className="fixed top-1/2 right-0 transform -translate-y-1/2 z-50 bg-[#C41E3A] hover:bg-black text-white py-4 px-3 rounded-l-2xl shadow-2xl transition-all hover:pr-6 flex flex-col items-center gap-2 group"
-        aria-label="Order Now"
-      >
-        <ShoppingBag className="h-6 w-6 animate-bounce" />
-        <span className="[writing-mode:vertical-rl] font-black uppercase tracking-widest text-xs">
-          Order Now
-        </span>
-      </button>
+      {/* Container for Floating Buttons */}
+      <div className="fixed top-1/2 right-0 transform -translate-y-1/2 z-50 flex flex-col gap-2">
+        
+        {/* Floating Order Button */}
+        <button
+          onClick={() => setOpen(true)}
+          className="bg-[#C41E3A] hover:bg-black text-white py-4 px-3 rounded-l-2xl shadow-2xl transition-all hover:pr-6 flex flex-col items-center gap-2 group"
+          aria-label="Order Now"
+        >
+          <ShoppingBag className="h-6 w-6 animate-bounce" />
+          <span className="[writing-mode:vertical-rl] font-black uppercase tracking-widest text-[10px]">
+            Order Now
+          </span>
+        </button>
+
+        {/* ✅ NEW Sell Now Button - Redirects to Buyer/Seller page */}
+        <Link
+          to="/buyer-seller"
+          className="bg-blue-600 hover:bg-black text-white py-4 px-3 rounded-l-2xl shadow-2xl transition-all hover:pr-6 flex flex-col items-center gap-2 group"
+          aria-label="Sell Now"
+        >
+          <Store className="h-6 w-6" />
+          <span className="[writing-mode:vertical-rl] font-black uppercase tracking-widest text-[10px]">
+            Sell Now
+          </span>
+        </Link>
+      </div>
 
       {/* Popup Form */}
       {open && (
