@@ -65,7 +65,7 @@ const Home = () => {
   ];
 
   const originalProducts = [
-    { id: "orig-1", name: "Traditional Galgal", price: 249, category: "Classic", rating: 4.8, images: ["./images/image.png", "./images/image.png", "./images/image.png"], tag: "Best Seller" },
+    { id: "orig-1", name: "Traditional Galgal", price: 249, category: "Classic", rating: 4.8, images: ["image.png", "image.png", "image.png"], tag: "Best Seller" },
     { id: "orig-2", name: "Himalayan Organ Ghee", price: 599, category: "Special", rating: 4.9, images: ["./images/Ghee.png", "./images/Ghee.png", "./images/Ghee.png"], tag: "New" },
     { id: "orig-3", name: "Himgiri Organic Water", price: 199, category: "Classic", rating: 4.7, images: ["./images/water.png", "./images/water.png", "./images/water.png"], tag: "Spicy" },
     { id: "orig-4", name: "Himgiri Organic Honey", price: 320, category: "Classic", rating: 4.6, images: ["./images/honey.png", "./images/honey.png", "./images/honey.png"], tag: "" },
