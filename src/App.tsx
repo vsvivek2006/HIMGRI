@@ -1,3 +1,4 @@
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Header from './components/Header';
@@ -12,6 +13,7 @@ import Privacy from './pages/Privacy';
 import NotFound from './pages/NotFound';
 import TrackOrder from './pages/TrackOrder';
 import Pickles from './pages/Pickles';
+import Reviews from './pages/Reviews';
 
 // ✅ PROFESSIONAL IMPORTS
 import BestSelling from './pages/BestSelling';
@@ -60,6 +62,7 @@ function App() {
               <Route path="/buyer-seller" element={<BuyerSeller />} />
               
               <Route path="/track-order" element={<TrackOrder />} />
+              <Route path="/reviews" element={<Reviews />} />
               <Route path="/pickles" element={<Pickles />} />
               <Route path="/best-selling" element={<BestSelling />} />
               <Route path="/special-pickles" element={<SpecialPickles />} />
