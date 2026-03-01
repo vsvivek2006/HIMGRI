@@ -17,6 +17,7 @@ const Header: React.FC = () => {
     { name: "Home", href: "/" },
     { name: "Best Selling", href: "/best-selling" },
     { name: "Pickles", href: "/pickles" },
+    { name: "Reviews", href: "/reviews" },
     { name: "Special Pickles", href: "/special-pickles" },
     { name: "Buyer/Seller", href: "/buyer-seller" }, // ✅ Added new page link
     { name: "Track Order", href: "/track-order" },
@@ -47,7 +48,7 @@ const Header: React.FC = () => {
           <Link to="/" className="flex items-center gap-3 group min-w-fit">
             <img 
               src="/logo.jpeg" 
-              alt="Himgiri Organic Logo" 
+              alt="Himgiri Pickles Logo" 
               className="h-10 w-10 object-contain group-hover:scale-105 transition-transform" 
             />
             <div className="flex flex-col leading-none">
