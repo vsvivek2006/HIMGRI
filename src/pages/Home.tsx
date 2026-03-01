@@ -6,16 +6,16 @@ import { collection, addDoc, onSnapshot, query, orderBy, serverTimestamp, delete
 import { ShoppingBag, Star, Flame, Leaf, ArrowRight, ShieldCheck, Zap, X, PlusCircle, Trash2, ChevronLeft, ChevronRight } from "lucide-react";
 import { useCart } from '../context/CartContext'; 
 
-// ✅ Internal Component for Product Image Sliders
-const ImageSlider = ({ images, name }: { images: string[], name: string }) => {
+// ✅ Internal Component for Image Sliders (Used for Top Hero and Products)
+const ImageSlider = ({ images, name, isHero = false }: { images: string[], name: string, isHero?: boolean }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
+    }, isHero ? 5000 : 3000); // Hero slides slower (5s) than products (3s)
     return () => clearInterval(timer);
-  }, [images.length]);
+  }, [images.length, isHero]);
 
   const prevSlide = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -30,20 +30,19 @@ const ImageSlider = ({ images, name }: { images: string[], name: string }) => {
   return (
     <div className="relative w-full h-full group/slider">
       {images.map((img, idx) => (
-        <img
-          key={idx}
-          src={img}
-          alt={`${name} - ${idx}`}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-            idx === currentIndex ? "opacity-100" : "opacity-0"
-          }`}
-        />
+        <div 
+          key={idx} 
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${idx === currentIndex ? "opacity-100" : "opacity-0"}`}
+        >
+          <img src={img} alt={`${name} - ${idx}`} className="w-full h-full object-cover" />
+          {isHero && <div className="absolute inset-0 bg-black/40" />} {/* Dark overlay only for top hero */}
+        </div>
       ))}
-      <button onClick={prevSlide} className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md p-1 rounded-full text-white opacity-0 group-hover/slider:opacity-100 transition-opacity z-10">
-        <ChevronLeft size={20} />
+      <button onClick={prevSlide} className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md p-1 md:p-2 rounded-full text-white opacity-0 group-hover/slider:opacity-100 transition-opacity z-10">
+        <ChevronLeft size={isHero ? 24 : 14} />
       </button>
-      <button onClick={nextSlide} className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md p-1 rounded-full text-white opacity-0 group-hover/slider:opacity-100 transition-opacity z-10">
-        <ChevronRight size={20} />
+      <button onClick={nextSlide} className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md p-1 md:p-2 rounded-full text-white opacity-0 group-hover/slider:opacity-100 transition-opacity z-10">
+        <ChevronRight size={isHero ? 24 : 14} />
       </button>
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
         {images.map((_, idx) => (
@@ -57,7 +56,13 @@ const ImageSlider = ({ images, name }: { images: string[], name: string }) => {
 const Home = () => {
   const { addToCart } = useCart(); 
 
-  // ✅ 30 Original Products with Hero Sections (3 images each)
+  // ✅ Hero Slider Images for the Top Section
+  const heroImages = [
+    "https://valleycultureindia.com/cdn/shop/collections/1_1.jpg?v=1652540557&width=3816",
+    "https://madhurasrecipe.com/wp-content/uploads/2022/04/mango_pickle_2.jpg",
+    "https://5.imimg.com/data5/SELLER/Default/2025/1/483492320/YG/SH/WN/158320994/spicy-red-chilli-pickle-1000x1000.jpg"
+  ];
+
   const originalProducts = [
     { id: "orig-1", name: "Traditional Mango Pickle", price: 249, category: "Classic", rating: 4.8, images: ["https://madhurasrecipe.com/wp-content/uploads/2022/04/mango_pickle_2.jpg", "https://5.imimg.com/data5/ANDROID/Default/2021/3/XW/YJ/YI/26279584/product-jpeg-500x500.jpg", "https://www.sharmispassions.com/wp-content/uploads/2012/04/MangoPickle6.jpg"], tag: "Best Seller" },
     { id: "orig-2", name: "Himalayan Garlic Special", price: 299, category: "Special", rating: 4.9, images: ["https://masalamonk.com/wp-content/uploads/2024/08/Karonde-ki-khatti-meethi-chutney-achae.jpg", "https://www.yummytummyaarthi.com/wp-content/uploads/2015/10/1-11.jpg", "https://5.imimg.com/data5/SELLER/Default/2023/9/341645069/YQ/YF/YX/19448849/garlic-pickle.jpg"], tag: "New" },
@@ -162,15 +167,15 @@ const Home = () => {
     <div className="bg-gray-50 min-h-screen font-sans selection:bg-[#C41E3A] selection:text-white">
       <Helmet><title>Himgiri Organic | Authentic Himalayan Taste</title></Helmet>
 
-      {/* Hero Banner */}
-      <section className="relative h-[400px] md:h-[500px] flex items-center justify-center bg-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-40">
-          <img src="https://valleycultureindia.com/cdn/shop/collections/1_1.jpg?v=1652540557&width=3816" className="w-full h-full object-cover" alt="Himalayan spices" />
-        </div>
-        <div className="relative z-10 text-center px-6">
-          <div className="inline-block px-4 py-1.5 bg-[#C41E3A] rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6 italic">Established in Mainpuri</div>
-          <h1 className="text-4xl md:text-8xl font-black uppercase tracking-tighter mb-4 leading-none italic">Pure Himalayan <br /><span className="text-[#C41E3A]">Tradition</span></h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto font-medium text-gray-200 italic">Handcrafted pickles from our Mainpuri kitchen.</p>
+      {/* ✅ NEW Top Hero Section with 3 Sliding Images */}
+      <section className="relative h-[500px] md:h-[650px] w-full overflow-hidden">
+        <ImageSlider images={heroImages} name="Top Hero Slider" isHero={true} />
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+          <div className="text-center px-6">
+            <div className="inline-block px-4 py-1.5 bg-[#C41E3A] rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6 italic text-white">Established in Mainpuri</div>
+            <h1 className="text-4xl md:text-8xl font-black uppercase tracking-tighter mb-4 leading-none italic text-white shadow-sm">Pure Himalayan <br /><span className="text-[#C41E3A]">Tradition</span></h1>
+            <p className="text-lg md:text-xl max-w-2xl mx-auto font-medium text-gray-200 italic shadow-sm">Handcrafted pickles from our Mainpuri kitchen.</p>
+          </div>
         </div>
       </section>
 
@@ -204,7 +209,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* ✅ Grid Updated to 3 Columns on mobile with reduced padding and gap */}
         <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-10">
           {combinedList.map((product) => (
             <div key={product.id} className="group bg-white rounded-[20px] md:rounded-[40px] overflow-hidden border border-gray-50 hover:shadow-2xl transition-all duration-500 flex flex-col relative">
