@@ -66,10 +66,10 @@ const Home = () => {
 
   const originalProducts = [
     { id: "orig-1", name: "Traditional Galgal", price: 249, category: "Classic", rating: 4.8, images: ["image.png", "image.png", "image.png"], tag: "Best Seller" },
-    { id: "orig-2", name: "Himalayan Organ Ghee", price: 599, category: "Special", rating: 4.9, images: ["./images/Ghee.png", "./images/Ghee.png", "./images/Ghee.png"], tag: "New" },
-    { id: "orig-3", name: "Himgiri Organic Water", price: 199, category: "Classic", rating: 4.7, images: ["./images/water.png", "./images/water.png", "./images/water.png"], tag: "Spicy" },
-    { id: "orig-4", name: "Himgiri Organic Honey", price: 320, category: "Classic", rating: 4.6, images: ["./images/honey.png", "./images/honey.png", "./images/honey.png"], tag: "" },
-    { id: "orig-5", name: "Himgiri Galgal Pickle", price: 235, category: "Himalayan", rating: 4.5, images: ["./images/galgalpick.png", "./images/galgalpick.png", "./images/galgalpick.png"], tag: "" },
+    { id: "orig-2", name: "Himalayan Organ Ghee", price: 599, category: "Special", rating: 4.9, images: ["Ghee.png", "Ghee.png", "Ghee.png"], tag: "New" },
+    { id: "orig-3", name: "Himgiri Organic Water", price: 199, category: "Classic", rating: 4.7, images: ["water.png", "water.png", "water.png"], tag: "Spicy" },
+    { id: "orig-4", name: "Himgiri Organic Honey", price: 320, category: "Classic", rating: 4.6, images: ["honey.png", "honey.png", "honey.png"], tag: "" },
+    { id: "orig-5", name: "Himgiri Galgal Pickle", price: 235, category: "Himalayan", rating: 4.5, images: ["galgalpick.png", "galgalpick.png", "galgalpick.png"], tag: "" },
     { id: "orig-6", name: "Green Chilli & Ginger", price: 210, category: "Special", rating: 4.7, images: ["/public/green-chilli-ginger.png", "/public/green-chilli-ginger.png", "/public/green-chilli-ginger.png"], tag: "Spicy" },
     { id: "orig-7", name: "Amla (Gooseberry) Pickle", price: 275, category: "Himalayan", rating: 4.9, images: ["/public/amla-pickle.png", "/public/amla-pickle.png", "/public/amla-pickle.png"], tag: "Healthy" },
     { id: "orig-8", name: "Jackfruit (Kathal) Pickle", price: 320, category: "Special", rating: 4.8, images: ["/public/jackfruit-pickle.png", "/public/jackfruit-pickle.png", "/public/jackfruit-pickle.png"], tag: "Premium" },
