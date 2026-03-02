@@ -34,7 +34,7 @@ const Reviews = () => {
         {/* Video Showcase Section */}
         <div className="bg-gray-900 rounded-[40px] overflow-hidden mb-20 relative aspect-video md:aspect-[21/9] flex items-center justify-center group cursor-pointer shadow-2xl">
           <img 
-            src="https://valleycultureindia.com/cdn/shop/collections/1_1.jpg?v=1652540557&width=3816" 
+            src="jars.png" 
             className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" 
             alt="Product Video Thumbnail" 
           />
@@ -88,3 +88,4 @@ const Reviews = () => {
 
 
 export default Reviews;
+
