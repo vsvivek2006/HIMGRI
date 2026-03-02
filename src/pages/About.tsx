@@ -128,7 +128,7 @@ const About = () => {
             
             <div className="relative order-1 lg:order-2">
               <img
-                src="https://valleycultureindia.com/cdn/shop/collections/1_1.jpg?v=1652540557&width=3816"
+                src="jars.png"
                 alt="Himgiri Pickles Authentic Kitchen"
                 className="rounded-[40px] shadow-2xl w-full h-[400px] object-cover"
               />
