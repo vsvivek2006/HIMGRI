@@ -35,7 +35,7 @@ Namaste! I am interested in Himgiri Pickles. Please share the catalog and bulk o
     {
       icon: <Phone className="h-6 w-6 text-[#C41E3A]" />,
       title: 'Call & WhatsApp',
-      content: '+91 92566 87099',
+      content: '+91 9817243494',
       link: 'tel:+91 88378 81559'
     },
     {
