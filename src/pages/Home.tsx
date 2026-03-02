@@ -59,7 +59,7 @@ const Home = () => {
   // ✅ Hero Slider Images for the Top Section
   const heroImages = [
     
-    "https://www.thehimalayanorganics.in/cdn/shop/files/ENTER_THE_HEALING_WORLD_OF_HIMALAYAN_ORGANICS.jpg?v=1720614380","jars.png",
+    "https://www.thehimalayanorganics.in/cdn/shop/files/ENTER_THE_HEALING_WORLD_OF_HIMALAYAN_ORGANICS.jpg?v=1720614380","/jars.png",
     "https://www.thehimalayanorganics.in/cdn/shop/files/LLogo.png?height=628&pad_color=fff&v=1667726774&width=1200"
     
   ];
