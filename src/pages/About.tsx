@@ -12,7 +12,7 @@ const About = () => {
       role: "Head of Traditional Flavors",
       experience: "15+ years in Traditional Food Science",
       description: "Dedicated to preserving authentic Mainpuri recipes. Oversees all spice blending and fermentation processes to ensure the divine taste of our Himalayan tradition.",
-      image: "/amit.png"
+      image: "https://static.vecteezy.com/system/resources/previews/054/869/545/non_2x/happy-master-chef-cartoon-illustration-black-line-art-with-cook-hat-concept-for-cooking-food-vector.jpg"
     },
     {
       name: "Quality Lead",
