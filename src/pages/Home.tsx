@@ -173,9 +173,9 @@ const Home = () => {
         <ImageSlider images={heroImages} name="Top Hero Slider" isHero={true} />
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
           <div className="text-center px-6">
-            <div className="inline-block px-4 py-1.5 bg-[#C41E3A] rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6 italic text-white">Established in Mainpuri</div>
+            <div className="inline-block px-4 py-1.5 bg-[#C41E3A] rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6 italic text-white">Established in  Himachali</div>
             <h1 className="text-4xl md:text-8xl font-black uppercase tracking-tighter mb-4 leading-none italic text-white shadow-sm">Pure Himalayan <br /><span className="text-[#C41E3A]">Tradition</span></h1>
-            <p className="text-lg md:text-xl max-w-2xl mx-auto font-medium text-gray-200 italic shadow-sm">Handcrafted pickles from our Mainpuri kitchen.</p>
+            <p className="text-lg md:text-xl max-w-2xl mx-auto font-medium text-gray-200 italic shadow-sm">Handcrafted pickles from our  Himachali kitchen.</p>
           </div>
         </div>
       </section>
