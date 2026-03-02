@@ -19,14 +19,14 @@ const About = () => {
       role: "Operations & Quality Assurance",
       experience: "12+ years in Food Manufacturing",
       description: "Leads overall production, supply chain, and strategic planning. Ensures every jar meets our premium organic standards and manages our global distribution network.",
-      image: "/vivek1.png"
+      image: "https://img.freepik.com/premium-photo/photo-realistic-as-quality-manager-with-checklist-certificate-concept-as-image-quality-m_980716-397365.jpg"
     },
     {
       name: "Technical Lead",
       role: "Digital & Facility Operations",
       experience: "10+ years in technical services",
       description: "Manages all technical operations, digital presence, and facility automation. Ensures our Mainpuri kitchen uses the best technology while maintaining traditional purity.",
-      image: "/vivek.png"
+      image: "https://img.freepik.com/premium-vector/manufacturing-process-flat-vector-illustration-factory-workers-engineer-working-with-computer-cartoon-characters-high-tech-robotic-machinery-smart-industry-controlling-production-operation_126283-2671.jpg"
     }
   ];
 
@@ -75,7 +75,7 @@ const About = () => {
         <title>About Himgiri Pickles | Authentic Himalayan & Mainpuri Tradition</title>
         <meta 
           name="description" 
-          content="Himgiri Pickles - Handcrafted, organic Himalayan pickles made in our Mainpuri kitchen. Experience 30+ varieties of pure veg pickles."
+          content="Himgiri Pickles - Handcrafted, organic Himalayan pickles made in our factory to your kitchen. Experience 30+ varieties of pure veg pickles."
         />
         <link rel="canonical" href="https://himigiripickles.com/about" />
       </Helmet>
@@ -120,8 +120,8 @@ const About = () => {
                 <Link to="/pickles" className="bg-gray-900 text-white px-8 py-4 rounded-xl text-sm font-black uppercase tracking-widest hover:bg-[#C41E3A] transition-all text-center">
                   Explore Flavors
                 </Link>
-                <a href="tel:+918837881559" className="bg-green-500 text-white px-8 py-4 rounded-xl text-sm font-black uppercase tracking-widest hover:bg-black transition-all flex items-center justify-center gap-2">
-                  <Phone className="h-4 w-4" /> Call: +91 88378 81559
+                <a href="tel:+919817243494" className="bg-green-500 text-white px-8 py-4 rounded-xl text-sm font-black uppercase tracking-widest hover:bg-black transition-all flex items-center justify-center gap-2">
+                  <Phone className="h-4 w-4" /> Call: +91 9817243494
                 </a>
               </div>
             </div>
@@ -196,7 +196,7 @@ const About = () => {
           </h2>
           <p className="text-gray-400 text-xl md:text-2xl mb-12 italic relative z-10">From our Mainpuri roots to your modern dining table.</p>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center relative z-10">
-            <a href="https://wa.me/918837881559" className="w-full md:w-auto bg-[#C41E3A] text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-all flex items-center justify-center gap-3">
+            <a href="https://wa.me/919817243494" className="w-full md:w-auto bg-[#C41E3A] text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-all flex items-center justify-center gap-3">
               <MessageCircle /> WhatsApp Order
             </a>
             <Link to="/contact" className="w-full md:w-auto bg-white text-gray-900 px-10 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-gray-100 transition-all text-center">
