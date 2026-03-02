@@ -72,7 +72,7 @@ const Reviews = () => {
             <h3 className="text-3xl font-black uppercase italic tracking-tighter leading-none mb-4">WANT TO <br />SHARE YOURS?</h3>
             <p className="text-white/80 font-medium mb-8">Tell us how you liked our Himalayan flavors.</p>
             <a 
-              href="https://wa.me/918837881559?text=Namaste! I want to share a review for Himgiri Pickles."
+              href="https://wa.me/919817243494?text=Namaste! I want to share a review for Himgiri Pickles."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full bg-white text-[#C41E3A] py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all shadow-lg"
@@ -85,5 +85,6 @@ const Reviews = () => {
     </div>
   );
 };
+
 
 export default Reviews;
