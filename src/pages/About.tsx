@@ -88,7 +88,7 @@ const About = () => {
             PURE HIMALAYAN TRADITION
           </h1>
           <p className="text-lg md:text-2xl mb-8 text-red-100 max-w-4xl mx-auto italic">
-            Handcrafted Organic Pickles from our Mainpuri Kitchen to your Table
+            Handcrafted Organic Pickles from our Factory to Your Kitchen.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <span className="bg-white text-[#C41E3A] px-4 py-2 rounded-full font-black text-xs uppercase tracking-widest italic">Est. 2010 Mainpuri</span>
