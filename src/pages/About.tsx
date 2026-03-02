@@ -5,32 +5,31 @@ import { Link } from "react-router-dom";
 import { Phone, MessageCircle, MapPin, Star, Users, Heart, Shield, Clock, Award, Settings, Leaf, Flame, ShieldCheck } from "lucide-react";
 
 const About = () => {
-  // ✅ Updated Team for Himgiri Pickles
+  // ✅ Team sections updated to remove individual names
   const teamMembers = [
     {
-      name: "lalan Ji",
-      role: "Founder & Master Chef",
+      name: "Master Chef",
+      role: "Head of Traditional Flavors",
       experience: "15+ years in Traditional Food Science",
-      description: "Visionary founder dedicated to preserving authentic Mainpuri recipes. Oversees all spice blending and fermentation processes to ensure the divine taste of our Himalayan tradition.",
+      description: "Dedicated to preserving authentic Mainpuri recipes. Oversees all spice blending and fermentation processes to ensure the divine taste of our Himalayan tradition.",
       image: "/amit.png"
     },
     {
-      name: "krishan Kumar",
-      role: "Operations & Quality Head",
+      name: "Quality Lead",
+      role: "Operations & Quality Assurance",
       experience: "12+ years in Food Manufacturing",
       description: "Leads overall production, supply chain, and strategic planning. Ensures every jar meets our premium organic standards and manages our global distribution network.",
       image: "/vivek1.png"
     },
     {
-      name: "Vivek Singh",
-      role: "Technical & Digital Manager",
+      name: "Technical Lead",
+      role: "Digital & Facility Operations",
       experience: "10+ years in technical services",
       description: "Manages all technical operations, digital presence, and facility automation. Ensures our Mainpuri kitchen uses the best technology while maintaining traditional purity.",
       image: "/vivek.png"
     }
   ];
 
-  // ✅ Values updated for Organic Pickles
   const values = [
     {
       icon: "🌿",
@@ -54,17 +53,15 @@ const About = () => {
     }
   ];
 
-  // ✅ Himgiri Milestones
   const milestones = [
     { year: "2010", event: "Himgiri Roots", description: "Started as a small home kitchen in Mainpuri serving local families." },
-    { year: "2013", event: "Recipe Perfection", description: "Refined 20+ traditional Himalayan recipes under Lalan Ji's guidance." },
+    { year: "2013", event: "Recipe Perfection", description: "Refined 20+ traditional Himalayan recipes under master chef guidance." },
     { year: "2016", event: "Kitchen Expansion", description: "Established a dedicated organic processing facility in Mainpuri." },
     { year: "2019", event: "Global Digital Launch", description: "Launched our digital presence to serve pickles across India." },
     { year: "2022", event: "Premium Range", description: "Introduced rare varieties like Bamboo Shoot and Lingru Fern pickles." },
     { year: "2024", event: "5000+ Happy Jars", description: "Milestone of delivering thousands of jars to authentic taste lovers." }
   ];
 
-  // ✅ Business Stats
   const stats = [
     { number: "5000+", label: "Happy Families", description: "Served across India" },
     { number: "30+", label: "Rare Varieties", description: "Classic & Himalayan flavors" },
@@ -78,14 +75,14 @@ const About = () => {
         <title>About Himgiri Pickles | Authentic Himalayan & Mainpuri Tradition</title>
         <meta 
           name="description" 
-          content="Himgiri Pickles - Handcrafted, organic Himalayan pickles made in our Mainpuri kitchen. Led by Lalan Ji, Krishan Kumar & Vivek Singh. 30+ varieties of pure veg pickles."
+          content="Himgiri Pickles - Handcrafted, organic Himalayan pickles made in our Mainpuri kitchen. Experience 30+ varieties of pure veg pickles."
         />
         <link rel="canonical" href="https://himigiripickles.com/about" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-12 md:py-24 bg-[#C41E3A] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black bg-opacity-20 italic"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-7xl font-black uppercase italic tracking-tighter mb-4">
             PURE HIMALAYAN TRADITION
@@ -111,13 +108,12 @@ const About = () => {
               </h2>
               <p className="text-base md:text-lg text-gray-600 mb-6 leading-relaxed italic font-medium">
                 <strong>Himgiri Pickles</strong> is born from the heart of <strong>Mainpuri</strong>. 
-                Founded in <strong>2010</strong> by <strong>Lalan Ji</strong>, we set out with a vision to bring 
+                Founded in <strong>2010</strong>, we set out with a vision to bring 
                 back the authentic, lost flavors of Himalayan and North Indian traditions.
               </p>
               <p className="text-base md:text-lg text-gray-600 mb-6 leading-relaxed italic font-medium">
-                Under the strategic guidance of <strong>Krishan Kumar</strong> and the technical innovation of 
-                <strong>Vivek Singh</strong>, we have transformed from a local kitchen into a premium brand 
-                serving <strong>5000+ happy families</strong> across the nation.
+                Under strategic professional guidance and technical innovation, we have transformed 
+                from a local kitchen into a premium brand serving <strong>5000+ happy families</strong> across the nation.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -162,7 +158,7 @@ const About = () => {
                 <div className="relative h-72 overflow-hidden bg-red-50 flex items-center justify-center">
                   <img src={member.image} alt={member.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md p-2 rounded-full shadow-lg">
-                    {index === 0 ? <Award className="text-yellow-600" /> : <Users className="text-[#C41E3A]" />}
+                    <Award className="text-yellow-600" />
                   </div>
                 </div>
                 <div className="p-8">
@@ -204,7 +200,7 @@ const About = () => {
               <MessageCircle /> WhatsApp Order
             </a>
             <Link to="/contact" className="w-full md:w-auto bg-white text-gray-900 px-10 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-gray-100 transition-all text-center">
-              Partner With Us
+              Become a Partner
             </Link>
           </div>
         </div>
