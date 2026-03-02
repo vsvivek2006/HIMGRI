@@ -16,7 +16,7 @@ const WhatsAppFloat = () => {
       return;
     }
     
-    const url = `https://wa.me/918837881559?text=🌶️ *Himgiri Organic- New Order*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Product:* ${encodeURIComponent(product)}%0A*Mobile:* ${encodeURIComponent(mobile)}%0A*Location:* ${encodeURIComponent(location)}%0A%0AHello! I want to place an order for these pickles. Please confirm.`;
+    const url = `https://wa.me/919817243494?text=🌶️ *Himgiri Organic- New Order*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Product:* ${encodeURIComponent(product)}%0A*Mobile:* ${encodeURIComponent(mobile)}%0A*Location:* ${encodeURIComponent(location)}%0A%0AHello! I want to place an order for these pickles. Please confirm.`;
     
     window.open(url, '_blank');
     setOpen(false);
